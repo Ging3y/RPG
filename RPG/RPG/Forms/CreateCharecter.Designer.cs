@@ -114,15 +114,15 @@
             // 
             this.ComboBox_type.FormattingEnabled = true;
             this.ComboBox_type.Items.AddRange(new object[] {
+            "Cleric ",
+            "Lumberjack",
             "Mage",
             "Paladin",
-            "Lumberjack",
-            "Edit this dork"});
+            "Rogue"});
             this.ComboBox_type.Location = new System.Drawing.Point(73, 119);
             this.ComboBox_type.Name = "ComboBox_type";
             this.ComboBox_type.Size = new System.Drawing.Size(231, 28);
             this.ComboBox_type.TabIndex = 6;
-            this.ComboBox_type.Text = "Select Charecter Type";
             // 
             // Label_type
             // 
