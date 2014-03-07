@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classses\Entity.cs" />
+    <Compile Include="Classes\Entity.cs" />
+    <Compile Include="Classes\Lumberjack.cs" />
+    <Compile Include="Classes\Mage.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>

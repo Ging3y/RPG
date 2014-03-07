@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using RPG.Classes;
+
 namespace RPG.Forms
 {
     public partial class CreateCharecter : Form
@@ -54,14 +56,24 @@ namespace RPG.Forms
                race + "\n\n" + "Gender: " + gender, "Creating your charecter");
         }
 
+       
+        #endregion
+
+        #region Button Click
         private void Button_showchardata_Click_1(object sender, EventArgs e)
         {
+            //Create a mage
+            Mage player1 = new Mage();
+
+            MessageBox.Show("You have a new Mage with a strength of " +
+                player1.Strength.ToString() + ".", "New Mage.");
+
             getFormValues();
             sendInfoMessage();
             this.Hide();
         }
-        #endregion
 
+        #endregion
 
         private void exitButton_Click(object sender, EventArgs e)
         {

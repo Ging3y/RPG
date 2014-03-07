@@ -139,7 +139,7 @@
             this.Button_showchardata.Name = "Button_showchardata";
             this.Button_showchardata.Size = new System.Drawing.Size(159, 85);
             this.Button_showchardata.TabIndex = 8;
-            this.Button_showchardata.Text = "Show data";
+            this.Button_showchardata.Text = "Save Charecter";
             this.Button_showchardata.UseVisualStyleBackColor = true;
             this.Button_showchardata.Click += new System.EventHandler(this.Button_showchardata_Click_1);
             // 
