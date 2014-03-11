@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Using the folder with all classes in it
 using RPG.Classes;
 
 namespace RPG.Forms
