@@ -15,9 +15,12 @@ namespace RPG.Classes
         #endregion
 
         #region Constructor Region
-        public Mage()
+        public Mage(string name, EntityGender gender)
             : base()
         {
+            Name = name;
+            Gender = gender;
+            //TODO: Add formulas based on class
         }
         #endregion
 
