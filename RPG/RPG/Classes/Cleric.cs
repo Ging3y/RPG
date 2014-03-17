@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPG.Classes
 {
-    class Lumberjack : Entity
+    class Cleric : Entity
     {
-
         #region Field Region
         #endregion
 
@@ -16,7 +15,7 @@ namespace RPG.Classes
         #endregion
 
         #region Constructor Region
-        public Lumberjack()
+        public Cleric()
             : base()
         {
         }

@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Cleric.cs" />
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\Lumberjack.cs" />
     <Compile Include="Classes\Mage.cs" />
+    <Compile Include="Classes\Paladin.cs" />
+    <Compile Include="Classes\Rogue.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
