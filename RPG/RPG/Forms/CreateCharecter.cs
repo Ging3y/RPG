@@ -15,18 +15,19 @@ namespace RPG.Forms
 {
     public partial class CreateCharecter : Form
     {
+        string charName, race, gender;
+
         public CreateCharecter()
         {
             InitializeComponent();
         }
 
+        #region Close Char creation form
         private void Button_cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-
-        string charName, race, gender;
-
+        #endregion
 
         #region Getting char info
         public void getFormValues()
@@ -76,14 +77,5 @@ namespace RPG.Forms
 
         #endregion
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            //Make sure not to use .Close();
-            //It crashes the program when you try to 
-            //reopen the window
-            this.Hide();
-        }
-
-   
     }
 }

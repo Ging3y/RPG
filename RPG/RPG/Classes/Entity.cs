@@ -23,8 +23,7 @@ namespace RPG.Classes
         protected int _dextirityModifier;
         protected int _wisdomModifier;
         protected int _healthModifier;
-      
-#endregion
+        #endregion
 
         #region Properties Region
         public EntityGender Gender
