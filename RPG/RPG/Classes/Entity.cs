@@ -13,7 +13,6 @@ namespace RPG.Classes
         #region Fields Region
         protected string entityType;
         protected EntityGender _gender;
-
         protected string _name;
         protected int _strength;
         protected int _dextirity;
@@ -56,7 +55,6 @@ namespace RPG.Classes
             get { return _health + _healthModifier; }
             protected set { _health = value; }
         }
-
         #endregion
 
         #region Constructors Region
