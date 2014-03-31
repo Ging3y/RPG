@@ -18,3 +18,6 @@ C:\Users\acerstudent4\Desktop\Repos\Programming\RPG\RPG\RPG\bin\Debug\RPG.pdb
 C:\Users\acerstudent4\Desktop\Repos\Programming\RPG\RPG\RPG\obj\Debug\RPG.exe
 C:\Users\acerstudent4\Desktop\Repos\Programming\RPG\RPG\RPG\obj\Debug\RPG.pdb
 C:\Users\acerstudent4\Desktop\Repos\Programming\RPG\RPG\RPG\obj\Debug\RPG.csprojResolveAssemblyReference.cache
+C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.exe
+C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.pdb
