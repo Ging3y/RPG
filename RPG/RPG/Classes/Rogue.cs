@@ -8,25 +8,53 @@ namespace RPG.Classes
 {
     class Rogue : Entity
     {
-    #region Field Region
-    #endregion
+        Random rand = new Random();
 
-    #region Property Region
-    #endregion
+        #region Field Region
+        #endregion
 
-    #region Constructor Region
-    public Rogue()
-        : base()
-    {
-       
-    }
-    #endregion
+        #region Property Region
+        #endregion
 
-    #region Method Region
-    #endregion
+        #region Constructor Region
+        
+        #region default Construc
+        //Paramerterless Constructer
+        public Rogue()
+            : base()
+        {
+        }
+        #endregion
 
-    #region Virtual Method region
-    #endregion
-         
+        #region Overload construc - Name and Gender
+        public Rogue(string name, EntityGender gender)
+            : base()
+        {
+            Name = name;
+            Gender = gender;
+            _wisdomModifier = rand.Next(3, 8);
+        }
+        #endregion
+
+        #region Overload Construc - Name, gender and stats
+        public Rogue(string name, EntityGender gender, int strength, int dextirity, int wisdom, int health)
+        {
+            _name = name;
+            _gender = gender;
+            _strength = strength;
+            _dextirity = dextirity;
+            _wisdom = wisdom;
+            _health = health;
+        }
+        #endregion
+
+        #endregion
+
+        #region Method Region
+        #endregion
+
+        #region Virtual Method region
+        #endregion
+        
     }
 }

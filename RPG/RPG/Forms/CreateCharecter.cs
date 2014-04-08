@@ -29,7 +29,7 @@ namespace RPG.Forms
         }
         #endregion
 
-        #region Getting char info
+        #region Getting form info
         public void getFormValues()
         {
             charName = TextBox_name.Text;

@@ -18,21 +18,26 @@ namespace RPG.Classes
         #endregion
 
         #region Constructor Region
+
+        #region default Construc
         public Lumberjack()
             : base()
         {
             _strength = rand.Next(3, 5);
             _health = rand.Next(2, 4);
         }
+        #endregion
 
-        //Constructor overload
+        #region Construc overload - name & gender
         public Lumberjack(string name, EntityGender gender)
             : base()
         {
             _strength = rand.Next(3, 5);
             _health = rand.Next(2, 4);
         }
-        //Constructor Overload (If user is allowed to provide values - like from a pool of points)
+        #endregion
+
+        #region Construc overload - name & gender and stats
         public Lumberjack(string name, EntityGender gender, int strength, int dextirity, int wisdom, int health)
         {
             _name = name;
@@ -42,6 +47,7 @@ namespace RPG.Classes
             _wisdom = wisdom;
             _health = health;
         }
+        #endregion
 
         #endregion
 
@@ -50,6 +56,6 @@ namespace RPG.Classes
 
         #region Virtual Method region
         #endregion
-         
+
     }
 }

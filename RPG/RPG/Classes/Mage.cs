@@ -17,21 +17,37 @@ namespace RPG.Classes
         #endregion
 
         #region Constructor Region
+
+        #region default Construc
         //Paramerterless Constructer
         public Mage()
             : base()
         {
         }
+        #endregion
 
-        //Overload
+        #region Overload construc - Name and Gender
         public Mage(string name, EntityGender gender)
             : base()
         {
             Name = name;
             Gender = gender;
-            //TODO: Add formulas based on class
             _wisdomModifier = rand.Next(3, 8);
         }
+        #endregion
+
+        #region Overload Construc - Name, gender and stats
+        public Mage(string name, EntityGender gender, int strength, int dextirity, int wisdom, int health)
+        {
+            _name = name;
+            _gender = gender;
+            _strength = strength;
+            _dextirity = dextirity;
+            _wisdom = wisdom;
+            _health = health;
+        }
+        #endregion
+
         #endregion
 
         #region Method Region
@@ -39,6 +55,6 @@ namespace RPG.Classes
 
         #region Virtual Method region
         #endregion
- 
+
     }
 }
