@@ -28,3 +28,4 @@ C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.Mai
 C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.Forms.CreateCharecter.resources
 C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.Properties.Resources.resources
 C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.csproj.GenerateResource.Cache
+C:\Users\acerstudent4\Desktop\Projects\Programming\RPG\RPG\RPG\obj\Debug\RPG.Forms.PointDistribute.resources

@@ -50,6 +50,12 @@
     <Compile Include="Classes\Mage.cs" />
     <Compile Include="Classes\Paladin.cs" />
     <Compile Include="Classes\Rogue.cs" />
+    <Compile Include="Forms\PointDistribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PointDistribute.Designer.cs">
+      <DependentUpon>PointDistribute.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\PointDistribute.resx">
+      <DependentUpon>PointDistribute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

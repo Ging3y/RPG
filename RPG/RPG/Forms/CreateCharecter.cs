@@ -75,6 +75,10 @@ namespace RPG.Forms
                 sendInfoMessage();
                 this.Hide();
             }
+
+            //Launch Point distribution
+            Forms.PointDistribute pointForm = new Forms.PointDistribute();
+            pointForm.Show();
            
         }
 
