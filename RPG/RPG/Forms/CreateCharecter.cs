@@ -16,6 +16,8 @@ namespace RPG.Forms
     public partial class CreateCharecter : Form
     {
         string charName, race, gender;
+        bool formState;
+
 
         public CreateCharecter()
         {
@@ -64,18 +66,43 @@ namespace RPG.Forms
         #region Button Click
         private void Button_showchardata_Click_1(object sender, EventArgs e)
         {
-            //Create a mage
-            Mage player1 = new Mage();
-
-            MessageBox.Show("You have a new Mage with a strength of " +
-                player1.Strength.ToString() + ".", "New Mage.");
-
-            getFormValues();
-            sendInfoMessage();
-            this.Hide();
+         
+            //Form Validation
+            validateForm();
+            if (formState == true)
+            {
+                getFormValues();
+                sendInfoMessage();
+                this.Hide();
+            }
+           
         }
 
         #endregion
 
+        #region Form Validation
+        public void validateForm()
+        {
+            //Handles name
+            if (String.IsNullOrEmpty(TextBox_name.Text) ||
+             TextBox_name.Text[0] == ' ')
+            {
+                MessageBox.Show("Your name is empty!");
+                formState = false;
+            }
+            //Gender not an issue, male is default selected
+            else if (String.IsNullOrEmpty(ComboBox_type.Text))
+            {
+                MessageBox.Show("You don't have a type selected!");
+                formState = false;
+            }
+            else
+            {
+                formState = true;
+            }
+        }
+        #endregion
+
+     
     }
 }

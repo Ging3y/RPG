@@ -63,7 +63,7 @@
             // RadioButton_male
             // 
             this.RadioButton_male.AutoSize = true;
-            this.RadioButton_male.Location = new System.Drawing.Point(3, 3);
+            this.RadioButton_male.Location = new System.Drawing.Point(3, 63);
             this.RadioButton_male.Name = "RadioButton_male";
             this.RadioButton_male.Size = new System.Drawing.Size(68, 24);
             this.RadioButton_male.TabIndex = 2;
@@ -84,9 +84,9 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.RadioButton_male);
-            this.flowLayoutPanel1.Controls.Add(this.RadioButton_female);
             this.flowLayoutPanel1.Controls.Add(this.RadioButton_unknown);
+            this.flowLayoutPanel1.Controls.Add(this.RadioButton_female);
+            this.flowLayoutPanel1.Controls.Add(this.RadioButton_male);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(314, 49);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(132, 98);
@@ -95,7 +95,7 @@
             // RadioButton_unknown
             // 
             this.RadioButton_unknown.AutoSize = true;
-            this.RadioButton_unknown.Location = new System.Drawing.Point(3, 63);
+            this.RadioButton_unknown.Location = new System.Drawing.Point(3, 3);
             this.RadioButton_unknown.Name = "RadioButton_unknown";
             this.RadioButton_unknown.Size = new System.Drawing.Size(101, 24);
             this.RadioButton_unknown.TabIndex = 4;
