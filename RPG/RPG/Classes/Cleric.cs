@@ -8,6 +8,9 @@ namespace RPG.Classes
 {
     class Cleric : Entity
     {
+        // CLERIC 
+        // The class that has more health, will not be as aggressive 
+
         Random rand = new Random();
 
         #region Field Region
@@ -16,15 +19,13 @@ namespace RPG.Classes
         #region Property Region
         #endregion
 
-        
         #region Constructor Region
 
         #region Default Constructor
         public Cleric()
             : base()
         {
-            _dextirity = rand.Next(3, 5);
-            _health = rand.Next(4, 7);
+           
         }
         #endregion
 
@@ -33,8 +34,8 @@ namespace RPG.Classes
         public Cleric(string name, EntityGender gender)
             : base()
         {
-            _dextirity = rand.Next(3, 5);
-            _health = rand.Next(4, 7);
+            _name = name;
+            _healthModifier = rand.Next(3, 5);
         }
         #endregion
 

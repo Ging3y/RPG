@@ -8,7 +8,9 @@ namespace RPG.Classes
 {
     class Lumberjack : Entity
     {
-        //Create random # generator
+        // LUMBERJACK
+        // The secret weapon. He is both stronger and healthier than normal
+
         Random rand = new Random();
 
         #region Field Region
@@ -23,8 +25,7 @@ namespace RPG.Classes
         public Lumberjack()
             : base()
         {
-            _strength = rand.Next(3, 5);
-            _health = rand.Next(2, 4);
+        
         }
         #endregion
 
@@ -32,8 +33,9 @@ namespace RPG.Classes
         public Lumberjack(string name, EntityGender gender)
             : base()
         {
-            _strength = rand.Next(3, 5);
-            _health = rand.Next(2, 4);
+            _name = name;
+            _strengthModifier = rand.Next(3, 5);
+            _healthModifier = rand.Next(2, 4);
         }
         #endregion
 

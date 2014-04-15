@@ -8,6 +8,9 @@ namespace RPG.Classes
 {
     public class Mage : Entity
     {
+        // MAGE
+        // Weaker than most, yet is incredibly wise.
+
         Random rand = new Random();
 
         #region Field Region
@@ -30,7 +33,7 @@ namespace RPG.Classes
         public Mage(string name, EntityGender gender)
             : base()
         {
-            Name = name;
+            _name = name;
             Gender = gender;
             _wisdomModifier = rand.Next(3, 8);
         }

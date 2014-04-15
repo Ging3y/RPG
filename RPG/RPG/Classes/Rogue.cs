@@ -8,6 +8,9 @@ namespace RPG.Classes
 {
     class Rogue : Entity
     {
+        // ROGUE
+        // Not as smart, yet very strong. Brute force is his strong point
+
         Random rand = new Random();
 
         #region Field Region
@@ -32,7 +35,7 @@ namespace RPG.Classes
         {
             Name = name;
             Gender = gender;
-            _wisdomModifier = rand.Next(3, 8);
+            _strengthModifier = rand.Next(3, 8);
         }
         #endregion
 

@@ -8,6 +8,9 @@ namespace RPG.Classes
 {
     class Paladin : Entity
     {
+        // PALADIN
+        // Average warrior, yet more dexterious than most
+
         Random rand = new Random();
 
         #region Field Region
@@ -30,9 +33,9 @@ namespace RPG.Classes
         public Paladin(string name, EntityGender gender)
             : base()
         {
-            Name = name;
+            _name = name;
             Gender = gender;
-            _wisdomModifier = rand.Next(3, 8);
+            _dextirityModifier = rand.Next(3, 7);
         }
         #endregion
 
