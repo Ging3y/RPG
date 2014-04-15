@@ -73,6 +73,7 @@ namespace RPG.Forms
             {
                 getFormValues();
                 sendInfoMessage();
+                //Enter code for saving information here
                 this.Hide();
             }
            
@@ -91,6 +92,8 @@ namespace RPG.Forms
                 formState = false;
             }
             //Gender not an issue, male is default selected
+
+            //Handling class selection
             else if (String.IsNullOrEmpty(ComboBox_type.Text))
             {
                 MessageBox.Show("You don't have a type selected!");

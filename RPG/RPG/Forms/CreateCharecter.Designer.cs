@@ -135,9 +135,9 @@
             // 
             // Button_showchardata
             // 
-            this.Button_showchardata.Location = new System.Drawing.Point(61, 300);
+            this.Button_showchardata.Location = new System.Drawing.Point(16, 175);
             this.Button_showchardata.Name = "Button_showchardata";
-            this.Button_showchardata.Size = new System.Drawing.Size(159, 85);
+            this.Button_showchardata.Size = new System.Drawing.Size(204, 87);
             this.Button_showchardata.TabIndex = 8;
             this.Button_showchardata.Text = "Save Charecter";
             this.Button_showchardata.UseVisualStyleBackColor = true;
@@ -145,9 +145,9 @@
             // 
             // Button_cancel
             // 
-            this.Button_cancel.Location = new System.Drawing.Point(245, 300);
+            this.Button_cancel.Location = new System.Drawing.Point(226, 175);
             this.Button_cancel.Name = "Button_cancel";
-            this.Button_cancel.Size = new System.Drawing.Size(159, 85);
+            this.Button_cancel.Size = new System.Drawing.Size(220, 87);
             this.Button_cancel.TabIndex = 9;
             this.Button_cancel.Text = "Cancel";
             this.Button_cancel.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 424);
+            this.ClientSize = new System.Drawing.Size(458, 272);
             this.Controls.Add(this.Button_cancel);
             this.Controls.Add(this.Button_showchardata);
             this.Controls.Add(this.Label_type);

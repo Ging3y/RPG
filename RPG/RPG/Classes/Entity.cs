@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace RPG.Classes
 {
     public enum EntityGender { Male, Female, Unknown };
+    public enum EntityClass { Cleric, Lumberjack, Mage, Paladin, Rogue, Unknown };
 
     public abstract class Entity
     {
         #region Fields Region
         protected string entityType;
         protected EntityGender _gender;
+        protected EntityClass _characterclass;
         protected string _name;
         protected int _strength;
         protected int _dextirity;
@@ -29,6 +31,11 @@ namespace RPG.Classes
         {
             get { return _gender; }
             protected set { _gender = value; }
+        }
+        public EntityClass CharacterClass
+        {
+            get { return _characterclass; }
+            protected set { _characterclass = value; }
         }
         public string Name
         {
@@ -62,6 +69,8 @@ namespace RPG.Classes
         {
             //Set initial property values
             Name = " ";
+            Gender = EntityGender.Unknown;
+            CharacterClass = EntityClass.Unknown;
             Strength = 0;
             Dextirity = 0;
             Wisdom = 0;
