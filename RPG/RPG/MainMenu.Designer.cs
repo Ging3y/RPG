@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.Button_createchar = new System.Windows.Forms.Button();
             this.Button_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -35,7 +36,7 @@
             // Button_createchar
             // 
             this.Button_createchar.BackColor = System.Drawing.SystemColors.Control;
-            this.Button_createchar.Location = new System.Drawing.Point(12, 349);
+            this.Button_createchar.Location = new System.Drawing.Point(31, 415);
             this.Button_createchar.Name = "Button_createchar";
             this.Button_createchar.Size = new System.Drawing.Size(169, 63);
             this.Button_createchar.TabIndex = 0;
@@ -46,7 +47,7 @@
             // Button_exit
             // 
             this.Button_exit.BackColor = System.Drawing.SystemColors.Control;
-            this.Button_exit.Location = new System.Drawing.Point(187, 349);
+            this.Button_exit.Location = new System.Drawing.Point(31, 493);
             this.Button_exit.Name = "Button_exit";
             this.Button_exit.Size = new System.Drawing.Size(169, 63);
             this.Button_exit.TabIndex = 1;
@@ -58,10 +59,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 424);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(878, 584);
             this.Controls.Add(this.Button_exit);
             this.Controls.Add(this.Button_createchar);
+            this.MaximumSize = new System.Drawing.Size(900, 640);
+            this.MinimumSize = new System.Drawing.Size(900, 640);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RPG - Main Menu";
             this.ResumeLayout(false);
 
