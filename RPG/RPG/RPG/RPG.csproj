@@ -44,14 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Cleric.cs" />
-    <Compile Include="Classes\Entity.cs" />
-    <Compile Include="Classes\Lumberjack.cs" />
-    <Compile Include="Classes\Mage.cs" />
-    <Compile Include="Classes\NPC.cs" />
-    <Compile Include="Classes\Paladin.cs" />
-    <Compile Include="Classes\Player.cs" />
-    <Compile Include="Classes\Rogue.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,7 +72,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,22 +87,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mage.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cleric.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rogue.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Lumberjack.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Paladin.jpg" />
+    <Folder Include="Classses\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

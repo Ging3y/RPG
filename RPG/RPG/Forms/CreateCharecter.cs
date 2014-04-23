@@ -22,6 +22,7 @@ namespace RPG.Forms
         public CreateCharecter()
         {
             InitializeComponent();
+
         }
 
         #region Close Char creation form
@@ -105,6 +106,47 @@ namespace RPG.Forms
             }
         }
         #endregion
+
+        private void ComboBox_type_TextChanged(object sender, EventArgs e)
+        {
+            if( ComboBox_type.Text == "Cleric")
+            {
+                PictureBox_char.Image = RPG.Properties.Resources.Cleric;
+                PictureBox_char.Refresh();
+                PictureBox_char.Visible = true;
+            }
+
+            if (ComboBox_type.Text == "Rogue")
+            {
+                PictureBox_char.Image = RPG.Properties.Resources.Rogue;
+                PictureBox_char.Refresh();
+                PictureBox_char.Visible = true;
+            }
+
+            if (ComboBox_type.Text == "Lumberjack")
+            {
+                PictureBox_char.Image = RPG.Properties.Resources.Lumberjack;
+                PictureBox_char.Refresh();
+                PictureBox_char.Visible = true;
+            }
+
+            if (ComboBox_type.Text == "Mage")
+            {
+                PictureBox_char.Image = RPG.Properties.Resources.Mage;
+                PictureBox_char.Refresh();
+                PictureBox_char.Visible = true;
+            }
+
+            if (ComboBox_type.Text == "Paladin")
+            {
+                PictureBox_char.Image = RPG.Properties.Resources.Paladin;
+                PictureBox_char.Refresh();
+                PictureBox_char.Visible = true;
+            }
+          
+        }
+
+        
 
      
     }
