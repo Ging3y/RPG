@@ -30,37 +30,37 @@ namespace RPG.Classes
         public EntityGender Gender
         {
             get { return _gender; }
-            protected set { _gender = value; }
+            set { _gender = value; }
         }
         public EntityClass CharacterClass
         {
             get { return _characterclass; }
-            protected set { _characterclass = value; }
+            set { _characterclass = value; }
         }
         public string Name
         {
             get { return _name; }
-            protected set { _name = value; }
+            set { _name = value; }
         }
         public int Strength
         {
             get { return _strength + _strengthModifier; }
-            protected set { _strength = value; }
+            set { _strength = value; }
         }
         public int Dextirity
         {
             get { return _dextirity + _dextirityModifier; }
-            protected set { _dextirity = value; }
+            set { _dextirity = value; }
         }
         public int Wisdom
         {
             get { return _wisdom + _wisdomModifier; }
-            protected set { _wisdom = value; }
+            set { _wisdom = value; }
         }
         public int Health
         {
             get { return _health + _healthModifier; }
-            protected set { _health = value; }
+            set { _health = value; }
         }
         #endregion
 

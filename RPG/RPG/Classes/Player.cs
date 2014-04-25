@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG.Classes
 {
-    class Player : Entity
+    public class Player : Entity
     {
         Random nand = new Random();
 

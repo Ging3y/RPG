@@ -18,52 +18,8 @@ namespace RPG.Forms
 {
     public partial class CreateCharecter : Form
     {
-        #region Settings Folder
-        private static string SettingsFolder
-        {
-            get
-            {
-                string folder = Environment.GetFolderPath(
-                    Environment.SpecialFolder.ApplicationData);
-                //adding a sub folder
-                folder = Path.Combine(folder, "RPGProject");
-                folder = Path.Combine(folder, "Settings");
-                //Make sure folder exists
-                if (!Directory.Exists(folder))
-                    Directory.CreateDirectory(folder);
-                return folder;
 
-            }
-        }
-        #endregion
-
-        #region Settingsfile
-        private static string SettingsFile
-        {
-            get
-            {
-                return Path.Combine(SettingsFolder, "player.xml");
-            }
-        }
-        #endregion
-
-       
-        public CreateCharecter()
-        {
-            InitializeComponent();
-
-        }
-
-        #region Close Char creation form
-        private void Button_cancel_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-        #endregion
-
-     
-
-        #region Button Click
+        #region Save Button
         private void Button_showchardata_Click_1(object sender, EventArgs e)
         {
             string name;
@@ -111,28 +67,13 @@ namespace RPG.Forms
 
             //Creat Object
             Player player1 = new Player(name, eGender, eClass);
+            //store our player
+            StoreCharacter(player1);
 
             MessageBox.Show(player1.ToString(), "Success");
-
-
-
-
-
-
-        
-         
-            //Form Validation
-            //validateForm();
-            //if (formState == true)
-            //{
-            //    getFormValues();
-            //    sendInfoMessage();
-            //    Enter code for saving information here
-            //    this.Hide();
-            //}
+            this.Hide();
            
         }
-
         #endregion
 
         #region Picture Box
@@ -177,10 +118,52 @@ namespace RPG.Forms
 
         #endregion
 
+        #region Initializers
+        public CreateCharecter()
+        {
+            InitializeComponent();
 
-        
+        }
 
+        #region Close Char creation form
+        private void Button_cancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+        #endregion
+        #endregion
 
+        private void StoreCharacter(Player player)
+        {
+            using (Stream stream = File.Create(PlayerSettingsFile))
+            {
+                XmlSerializer ser = new XmlSerializer(player.GetType());
+                ser.Serialize(stream, player); 
+            }
+        }
 
+        private static String SettingsFolder
+        {
+            get
+            {
+                //create a string folder
+                string folder = Environment.GetFolderPath(
+                    Environment.SpecialFolder.ApplicationData);
+                //add a subfolder
+                folder = Path.Combine(folder, "RPG Project");
+                folder = Path.Combine(folder, "CharacterSettings");
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+                return folder;
+            }
+        }
+
+        private static String PlayerSettingsFile
+        {
+            get
+            {
+                return Path.Combine(SettingsFolder, "Player.xml");
+            }
+        }
     }
 }
