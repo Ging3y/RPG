@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 //Using the folder with all classes in it
 using RPG.Classes;
@@ -15,6 +18,36 @@ namespace RPG.Forms
 {
     public partial class CreateCharecter : Form
     {
+        #region Settings Folder
+        private static string SettingsFolder
+        {
+            get
+            {
+                string folder = Environment.GetFolderPath(
+                    Environment.SpecialFolder.ApplicationData);
+                //adding a sub folder
+                folder = Path.Combine(folder, "RPGProject");
+                folder = Path.Combine(folder, "Settings");
+                //Make sure folder exists
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+                return folder;
+
+            }
+        }
+        #endregion
+
+        #region Settingsfile
+        private static string SettingsFile
+        {
+            get
+            {
+                return Path.Combine(SettingsFolder, "player.xml");
+            }
+        }
+        #endregion
+
+
         string charName, race, gender;
         bool formState;
 
@@ -51,6 +84,7 @@ namespace RPG.Forms
             {
                 gender = "Unknown";
             }
+
         }
         #endregion
 
@@ -67,16 +101,70 @@ namespace RPG.Forms
         #region Button Click
         private void Button_showchardata_Click_1(object sender, EventArgs e)
         {
+            string name;
+
+            if (String.IsNullOrEmpty(TextBox_name.Text) ||
+                TextBox_name.Text[0] == ' ')
+            {
+                MessageBox.Show("You must name your character. " +
+                    "Note also: names cannot begin with a space");
+                return;
+            }
+            name = this.TextBox_name.Text;
+
+            //Check gender
+            EntityGender eGender = new EntityGender();
+            eGender = EntityGender.Unknown;
+            if (this.RadioButton_male.Checked)
+                eGender = EntityGender.Male;
+            else if (this.RadioButton_female.Checked)
+                eGender = EntityGender.Female;
+            else
+            {
+                MessageBox.Show("You must select a gender.");
+                return;
+            }
+
+            //Check Class
+            EntityClass eClass;
+            eClass = EntityClass.Unknown;
+            if (this.ComboBox_type.Text == "Mage")
+                eClass = EntityClass.Mage;
+            else if (this.ComboBox_type.Text == "Rogue")
+                eClass = EntityClass.Rogue;
+            else if (this.ComboBox_type.Text == "Cleric")
+                eClass = EntityClass.Cleric;
+            else if (this.ComboBox_type.Text == "Paladin")
+                eClass = EntityClass.Paladin;
+            else if (this.ComboBox_type.Text == "Lumberjack")
+                eClass = EntityClass.Lumberjack;
+            else
+            {
+                MessageBox.Show("You must choose a class for your character");
+                return;
+            }
+
+            //Creat Object
+            Player player1 = new Player(name, eGender, eClass);
+
+            MessageBox.Show(player1.ToString(), "Success");
+
+
+
+
+
+
+        }
          
             //Form Validation
-            validateForm();
-            if (formState == true)
-            {
-                getFormValues();
-                sendInfoMessage();
-                //Enter code for saving information here
-                this.Hide();
-            }
+            //validateForm();
+            //if (formState == true)
+            //{
+            //    getFormValues();
+            //    sendInfoMessage();
+            //    Enter code for saving information here
+            //    this.Hide();
+            //}
            
         }
 
